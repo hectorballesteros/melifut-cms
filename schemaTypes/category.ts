@@ -19,13 +19,21 @@ export default {
       title: 'Orden',
       type: 'number',
     },
+
     {
       name: 'icon',
       title: 'Ícono',
       type: 'image',
     },
 
-    // 🔥 DRAG & DROP
+    {
+      name: 'parent',
+      title: 'Categoría padre',
+      type: 'reference',
+      to: [{type: 'category'}],
+      description: 'Opcional. Si se define, esta categoría será hija de otra.',
+    },
+
     {
       name: 'products',
       title: 'Productos (ordenados)',
